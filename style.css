@@ -1,0 +1,615 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Gaya Umum */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ecf5ee;
+  }
+  
+  /* Header */
+  header {
+    background-color: #96c8e1;
+    color: rgb(31, 21, 21);
+    padding: 20px 0;
+  }
+  
+  header .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: rgb(19, 17, 17);
+    text-decoration: none;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.pexels.com/photos/418917601/pexels-aibek-skakov-418917601-29902918.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(31, 26, 26);
+    padding: 80px 20px; /* Adjusted padding for balance */
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero .btn {
+    background-color: rgb(19, 7, 90);
+    color: #d8b3d0;
+    padding: 12px 30px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .hero .btn:hover {
+    background-color: #d67e7e;
+    color: rgb(7, 67, 11);
+  }
+  
+  /* Section Umum */
+  section {
+    padding: 60px 20px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  /* About Section */
+  .about {
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+  }
+  
+  /* Project Section */
+  .projects .project-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the project items */
+  }
+  
+  .project-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  .project-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .project-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project-item ul li {
+    margin-bottom: 5px;
+  }
+  
+  .project-item ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .project-item ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Section */
+  .contact {
+    text-align: center;
+  }
+  /* Kontak */
+  .contact {
+    text-align: center;
+  }
+  
+  .contact a {
+    color: #1d8e72;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact i {
+    font-size: 24px;
+    margin-left: 8px;
+  }
+  
+  /* Ikon untuk Gmail */
+  .contact .fa-google {
+    color: #ea4335; /* Warna khas Gmail */
+  }
+  
+  .contact .fa-whatsapp {
+    color: #25d366; /* Warna khas WhatsApp */
+  }
+  
+  .contact .fa-instagram {
+    color: #E4405F; /* Warna khas Instagram */
+  }
+  
+  /* Responsif untuk ikon */
+  @media screen and (max-width: 768px) {
+    .contact i {
+      font-size: 20px; /* Menyesuaikan ukuran ikon untuk layar kecil */
+    }
+  }
+  
+  /* Kontak */
+  .contact {
+    text-align: center;
+  }
+  
+  .contact a {
+    color: #1d8e72;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact i {
+    font-size: 24px;
+    margin-left: 8px;
+  }
+  
+  .contact .fa-instagram {
+    color: #E4405F; /* Warna khas Instagram */
+  }
+  
+  /* Responsif untuk ikon Instagram */
+  @media screen and (max-width: 768px) {
+    .contact i {
+      font-size: 20px; /* Menyesuaikan ukuran ikon untuk layar kecil */
+    }
+  }
+  
+  
+  .contact a {
+    color: #1d8e72;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact i {
+    font-size: 24px;
+    color: #25d366;
+    margin-left: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: rgb(226, 125, 125);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  /* Responsif */
+  @media screen and (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .projects .project-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  .project-item {
+    background-color: rgb(218, 227, 232);
+    border: 1px solid #4d3103;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgb(236, 228, 228);
+  }
+  
+  .project-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Kontak */
+  .contact {
+    text-align: center;
+  }
+  
+  .contact a {
+    color: #1d8e72;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact i {
+    font-size: 24px;
+    color: #25d366;
+    margin-left: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: rgb(226, 125, 125);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  /* Responsif */
+  @media screen and (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .projects .project-list {
+      flex-direction: column;
+    }
+  }
+  /* Gaya untuk gambar proyek */
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Daftar proyek */
+  .project-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efek hover untuk proyek */
+  .project-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Tombol untuk melihat proyek */
+  .btn-project {
+    background-color: #19a2b8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .btn-project:hover {
+    background-color: #1c3c49;
+  }
+  /* Animasi untuk nama bergerak */
+  .moving-name {
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: moveName 10s infinite linear; /* Durasi animasi diperpanjang menjadi 10 detik */
+  }
+  
+  .moving-name span {
+    display: inline-block;
+    animation: moveText 10s infinite linear; /* Durasi animasi diperpanjang menjadi 10 detik */
+  }
+  
+  /* Keyframes untuk animasi bergerak */
+  @keyframes moveName {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+  /* Animasi untuk nama yang muncul perlahan (fade-in) */
+  .fade-in-name {
+    font-size: 36px;
+    margin-bottom: 10px;
+    opacity: 0; /* Mulai dengan opasitas 0 (tidak terlihat) */
+    animation: fadeIn 3s forwards; /* Animasi berlangsung 3 detik */
+  }
+  
+  /* Keyframes untuk efek fade-in */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0; /* Mulai dengan tidak terlihat */
+    }
+    100% {
+        opacity: 1; /* Berakhir dengan teks sepenuhnya terlihat */
+    }
+  }
+  /* Container Umum untuk Semua Section */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Menyusun section secara vertikal */
+    gap: 40px; /* Memberikan jarak antar section */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.pexels.com/photos/418917601/pexels-aibek-skakov-418917601-29902918.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: rgb(31, 26, 26);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background-color: rgb(19, 7, 90);
+    color: #d8b3d0;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .hero .btn:hover {
+    background-color: #d67e7e;
+    color: rgb(7, 67, 11);
+  }
+  
+  /* Bagian Tentang Saya */
+  .about {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+  }
+  
+  /* Bagian Proyek */
+  .projects {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .project-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Menyusun proyek agar berada di tengah */
+  }
+  /* Menata logo proyek */
+  .project-item {
+    background-color: rgb(218, 227, 232);
+    border: 1px solid #4d3103;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgb(236, 228, 228);
+    text-align: center; /* Memastikan teks dan logo di tengah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px); /* Efek hover untuk memberikan kesan interaktif */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-logo {
+    width: 50px;  /* Ukuran logo */
+    height: 50px; /* Ukuran logo */
+    object-fit: contain; /* Menjaga proporsi gambar */
+    margin-bottom: 15px; /* Memberikan jarak antara logo dan teks */
+  }
+  
+  .project-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .project-item ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  .project-item ul li {
+    margin-bottom: 5px;
+  }
+  
+  .project-item ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .project-item ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Desain responsif untuk proyek */
+  @media screen and (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-item {
+        margin-bottom: 20px;
+    }
+  }
+  
