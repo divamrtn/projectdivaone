@@ -13,7 +13,6 @@ main ()
 	
 	cout << "------------------------------------------------------------" << endl ;
 	cout << " | Nama: MOCH DIVA MARTIN |" << endl ;
-	cout << " | Nim: 41037006241077    |" << endl ;
 	cout << " | Fakultas: TEKNIK       |" << endl ;
 	cout << " | Prodi: INFORMATIKA     |" << endl ;
 	cout << "------------------------------------------------------------" << endl ;
