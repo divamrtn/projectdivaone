@@ -10,47 +10,221 @@
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #ecf5ee;
+    background-color: #dde5e0;
   }
   
-  /* Header */
-  header {
-    background-color: #96c8e1;
-    color: rgb(31, 21, 21);
-    padding: 20px 0;
+  /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+}
+
+#header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#header .logo a {
+  color: #161212;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+#header.header-scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 12px 0;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar>ul>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 30px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #171313;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  background-color: #151313;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 80%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #100c0c;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #160b0b;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #4e4e4e;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #0078ff;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
   }
-  
-  header .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
   }
-  
-  header h1 {
-    font-size: 24px;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: rgb(19, 17, 17);
-    text-decoration: none;
-  }
-  
-  header nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
+}
+/* Navigation Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white; /* Warna teks putih */
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ff9900; /* Warna teks saat hover */
+}
+
+.nav-menu a.active {
+  color: #ffffff; /* Warna teks untuk menu aktif */
+}
+
+.nav-menu a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Warna garis bawah menu aktif */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
   /* Hero Section */
   .hero {
     background: url('https://images.pexels.com/photos/418917601/pexels-aibek-skakov-418917601-29902918.jpg') no-repeat center center fixed;
@@ -84,7 +258,149 @@
     background-color: #d67e7e;
     color: rgb(7, 67, 11);
   }
-  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tinggi penuh layar */
+    background-image: url('WhatsApp Image 2024-12-25 at 18.54.48_44547301.jpg'); /* Ganti dengan path gambar latar belakang Anda */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(11, 7, 69);
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-title {
+    font-size: 3rem; /* Ukuran font besar */
+    font-weight: bold; /* Tebal */
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem; /* Ukuran font untuk subtitle */
+    margin-top: 10px;
+    font-style: italic; /* Opsional: menambahkan gaya miring */
+}
+
+
+  /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+@media (min-width: 767px) {
+  .about-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
+  }
+}
+
+.skill-mf span {
+  color: #4e4e4e;
+}
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: 0.7rem;
+  background-color: #0078ff;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Jarak antara foto dan teks */
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px; /* Untuk sudut melengkung */
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border: 2px solid #000; /* Garis tepi */
+}
+
+.profile-info {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.service-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-ico {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.s-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+.title-a {
+  font-size: 36px; /* Sesuaikan ukuran huruf judul */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000; /* Warna teks hitam */
+  margin-bottom: 10px;
+}
+
+.subtitle-a {
+  font-size: 16px; /* Ukuran huruf subtitle */
+  color: #666; /* Warna teks subtitle */
+  margin-bottom: 15px;
+}
+
+.line-mf {
+  width: 50px;
+  height: 3px;
+  background-color: #007bff; /* Warna biru seperti pada gambar */
+  margin: 0 auto; /* Pusatkan garis */
+  border-radius: 3px;
+}
+
   /* Section Umum */
   section {
     padding: 60px 20px;
@@ -176,6 +492,22 @@
   }
   
   /* Contact Section */
+  .contact .list-ico i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact .socials a {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.contact .socials a:hover {
+    color: #007bff;
+}
+
   .contact {
     text-align: center;
   }
@@ -310,26 +642,104 @@
     margin-bottom: 10px;
   }
   
-  /* Kontak */
-  .contact {
-    text-align: center;
+  /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.footer-paralax {
+  padding: 4rem 0 0 0;
+}
+
+.contact-mf {
+  margin-top: 4rem;
+}
+
+@media (min-width: 767px) {
+  .contact-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
   }
-  
-  .contact a {
-    color: #1d8e72;
-    text-decoration: none;
+}
+
+.php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.php-email-form input:focus,
+.php-email-form textarea:focus {
+  border-color: #0078ff;
+}
+
+.php-email-form input {
+  padding: 10px 15px;
+}
+
+.php-email-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 0;
+}
+
+.php-email-form button[type=submit] {
+  background: #0078ff;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.php-email-form button[type=submit]:hover {
+  background: #3393ff;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .contact a:hover {
-    text-decoration: underline;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .contact i {
-    font-size: 24px;
-    color: #25d366;
-    margin-left: 8px;
-  }
-  
+}
+
   /* Footer */
   footer {
     background-color: #333;
@@ -611,5 +1021,23 @@
     .project-item {
         margin-bottom: 20px;
     }
+  }
+  footer {
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+    background: #0062d3;
+  }
+  
+  footer .copyright {
+    margin-bottom: 0.3rem;
+  }
+  
+  footer .credits {
+    margin-bottom: 0;
+  }
+  
+  footer .credits a {
+    color: #fff;
   }
   
