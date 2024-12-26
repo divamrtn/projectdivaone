@@ -7,10 +7,11 @@
   
   /* Gaya Umum */
   body {
+    background: url('https://images.pexels.com/photos/418917601/pexels-aibek-skakov-418917601-29902918.jpg') no-repeat center center fixed;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #dde5e0;
+    color: #171010;
+    background-color: #cdedd9;
   }
   
   /*--------------------------------------------------------------
@@ -31,7 +32,7 @@
 }
 
 #header .logo a {
-  color: #161212;
+  color: #1a1212;
 }
 
 #header .logo img {
@@ -39,7 +40,7 @@
 }
 
 #header.header-scrolled {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(22, 10, 102, 0.9);
   padding: 12px 0;
 }
 /*--------------------------------------------------------------
@@ -200,7 +201,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
-  color: white; /* Warna teks putih */
+  color: rgb(7, 7, 70); /* Warna teks putih */
   font-weight: bold;
   position: relative;
   transition: color 0.3s;
@@ -246,7 +247,7 @@
   
   .hero .btn {
     background-color: rgb(19, 7, 90);
-    color: #d8b3d0;
+    color: #211c4e;
     padding: 12px 30px;
     border: none;
     text-decoration: none;
@@ -259,29 +260,83 @@
     color: rgb(7, 67, 11);
   }
   .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('WhatsApp Image 2024-11-27 at 19.05.23_2f14bcef.jpg'); /* Ganti 'your-image.jpg' dengan URL atau path ke gambar Anda */
+    background-size: cover;
+    background-position: center;
+    color: #1e1e4d; /* Warna teks diubah agar kontras dengan background */
+    height: 100vh; /* Agar memenuhi tinggi layar */
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #100849;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #160f45;
+  }
+  
+  .cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1e1343;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+/* Keyframes untuk animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Posisi lebih rendah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi semula */
+    }
+}
+
+/* Tambahkan gaya umum */
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Tinggi penuh layar */
-    background-image: url('WhatsApp Image 2024-12-25 at 18.54.48_44547301.jpg'); /* Ganti dengan path gambar latar belakang Anda */
+    height: 100vh;
+    background-image: url('WhatsApp Image 2024-11-27 at 19.05.23_2f14bcef.jpg'); /* Path gambar */
     background-size: cover;
     background-position: center;
     text-align: center;
-    color: rgb(11, 7, 69);
+    color: rgb(21, 12, 70);
     font-family: 'Arial', sans-serif;
 }
 
 .hero-title {
-    font-size: 3rem; /* Ukuran font besar */
-    font-weight: bold; /* Tebal */
+    font-size: 3rem;
+    font-weight: bold;
     margin: 0;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem; /* Ukuran font untuk subtitle */
+    font-size: 1.5rem;
     margin-top: 10px;
-    font-style: italic; /* Opsional: menambahkan gaya miring */
+    font-style: italic;
 }
 
 
@@ -313,7 +368,7 @@
 }
 
 .skill-mf .progress {
-  background-color: #cde1f8;
+  background-color: #8dacd0;
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
@@ -321,12 +376,12 @@
 
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #0078ff;
+  background-color: #ff0000;
 }
 .profile-container {
   display: flex;
   align-items: center;
-  gap: 20px; /* Jarak antara foto dan teks */
+  gap: 50px; /* Jarak antara foto dan teks */
 }
 
 .profile-picture {
@@ -400,6 +455,36 @@
   margin: 0 auto; /* Pusatkan garis */
   border-radius: 3px;
 }
+/*--------------------------------------------------------------
+# Counter
+--------------------------------------------------------------*/
+.counter-box {
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 577px) {
+  .counter-box {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.counter-ico {
+  margin-bottom: 1rem;
+}
+
+.counter-ico .ico-circle {
+  height: 60px;
+  width: 60px;
+  line-height: 1.5;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.counter-num .counter {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
 
   /* Section Umum */
   section {
